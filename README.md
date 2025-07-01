@@ -1,73 +1,88 @@
-# Welcome to your Lovable project
+# 📈 Stock Market Insights Web App
 
-## Project info
+A dynamic web application that delivers curated stock market news, connects to user portfolios (real or simulated), and uses AI to provide sentiment analysis of market developments.
 
-**URL**: https://lovable.dev/projects/343fd401-ef36-4dcf-afda-1219477b2880
+Github URL:
+Deploy URL:
+ShortWorking Video Demo:
 
-## How can I edit this code?
+## 🔧 Features
 
-There are several ways of editing your application.
+### 📰 News Scraping Module
+- Automatically scrapes stock market-related news in India.
+- Sources: [Moneycontrol](https://www.moneycontrol.com/), [Economic Times Markets](https://economictimes.indiatimes.com/markets), or free news APIs.
+- Headlines are shown in a **General News** section.
 
-**Use Lovable**
+### 📊 Portfolio Linking Module
+- Users can link their stock portfolios to the webpage.
+- Integration with broker APIs like:
+  - Zerodha Kite Connect (sandbox)
+  - Groww Developer Sandbox
+  - Or any other free/open APIs
+- If API integration is unavailable, users can simulate a portfolio by manually entering stock symbols.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/343fd401-ef36-4dcf-afda-1219477b2880) and start prompting.
+### 🔍 Filtered News Section
+- Displays only news relevant to the user’s portfolio.
+- Automatically matches keywords/tickers in news headlines with the user's stock list.
 
-Changes made via Lovable will be committed automatically to this repo.
+### 🤖 AI Analysis Module
+- Uses OpenAI / ChatGPT API to analyze filtered news.
+- Outputs sentiment indicators for each headline:
+  - 📈 Positive Impact
+  - ⚖️ Neutral Impact
+  - 📉 Negative Impact
+- If no portfolio is linked, generates a **general market sentiment summary**.
+- *(Optional Bonus)*: Adds confidence scores and brief reasoning under each sentiment.
 
-**Use your preferred IDE**
+### 📣 Notification System (Optional)
+- Sends push notifications or email alerts based on sentiment analysis results or major market changes.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🧪 Tech Stack
 
-Follow these steps:
+| Layer        | Technology                  |
+|--------------|-----------------------------|
+| Frontend     | **React.js**, **Next.js** (Preferred) |
+| Backend      | **Node.js** (Optional)       |
+| Scraping     | **Cheerio**, **Axios** (or Python's BeautifulSoup via microservice) |
+| AI API       | **OpenAI API (ChatGPT)**     |
+| Portfolio APIs | Zerodha / Groww (or mocked input) |
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🚀 Getting Started
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 1. Clone the repo
+```bash
+git clone https://github.com/your-username/stock-news-ai.git
+cd stock-news-ai
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+
+
+2. Install dependencies
+bash
+Copy
+Edit
+npm install
+
+3. Environment Variables
+Create a .env.local file:
+
+env
+Copy
+Edit
+OPENAI_API_KEY=your_openai_key
+NEWS_API_URL=https://yournewsapi.com
+BROKER_API_KEY=your_broker_key (if applicable)
+
+
+. Run the development server
+bash
+Copy
+Edit
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/343fd401-ef36-4dcf-afda-1219477b2880) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Let me know if you’d like me to generate this as a downloadable file or update based on your GitHub repo URL.
