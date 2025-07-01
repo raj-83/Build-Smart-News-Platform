@@ -3,7 +3,7 @@
 A dynamic web application that delivers curated stock market news, connects to user portfolios (real or simulated), and uses AI to provide sentiment analysis of market developments.
 
 Github URL:
-Deploy URL:
+Deploy URL:https://build-smart-news-platform.vercel.app/
 ShortWorking Video Demo:
 
 ## 🔧 Features
